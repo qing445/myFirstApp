@@ -10,6 +10,21 @@ import shap
 import matplotlib.pyplot as plt
 import streamlit as st
 import numpy as np
+import os
+
+sklearn_path = "/home/adminuser/venv/lib/python3.11/site-packages/sklearn/tree/_classes.py"
+
+if os.path.exists(sklearn_path):
+    with open(sklearn_path, "r") as file:
+        content = file.read()
+    
+    # 这里可以替换某个问题代码（举例，注释掉 'monotonic_cst'）
+    content = content.replace("and self.monotonic_cst is None", "# and self.monotonic_cst is None ")
+
+    with open(sklearn_path, "w") as file:
+        file.write(content)
+
+# print("Patched scikit-learn successfully!")
 
 
 # 标题,居中
