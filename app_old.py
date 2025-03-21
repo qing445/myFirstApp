@@ -49,7 +49,7 @@ input_features = [A, B, C, D, E, F, G, H, I, J, K, L]
 sample = np.array([x for x in input_features]).reshape(1, -1)
 print(sample)
 if st.button('Predict'):
-    model = joblib.load('pt_st/medicalPredict20250320/model_old.pkl')
+    model = joblib.load('model_old.pkl')
 
     explainer = shap.Explainer(model)
     shap_values = explainer(sample)
@@ -67,7 +67,7 @@ if st.button('Predict'):
 
     st.subheader("SHAP Explanation")
     plt.figure()
-    shap.initjs()
+    # shap.initjs()
     shap.plots.force(
         explainer.expected_value[1],  # 类别 1 的基准值
         shap_values.values[0, :, 1],  # 类别 1 的 SHAP 值
