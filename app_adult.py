@@ -63,7 +63,7 @@ if st.button('Predict'):
 
     st.subheader("SHAP Explanation")
     plt.figure()
-    shap.initjs()
+    # shap.initjs()
     shap.plots.force(
         explainer.expected_value[1],  # 类别 1 的基准值
         shap_values.values[0, :, 1],  # 类别 1 的 SHAP 值
