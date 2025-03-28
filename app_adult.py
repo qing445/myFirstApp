@@ -28,7 +28,7 @@ with left:
         is_pass = False
     A = st.number_input('Age（years）', max_value=100, min_value=18)
     E = st.number_input('eGFR（mL/min/1.73m²）', max_value=500, min_value=0)
-    C = st.number_input('Neutrophil-to-lymphocyte ratio (NLR)', max_value=50, min_value=0,value=0.5)
+    C = st.number_input('Neutrophil-to-lymphocyte ratio (NLR)', max_value=50.0, min_value=0.0,value=0.5)
     if C<0.1 or C>25:
         st.error(warning)
         is_pass =False
@@ -36,7 +36,7 @@ with left:
     if D<10 or D>1500:
         st.error(warning)
         is_pass =False
-    J = st.number_input('International Normalized Ratio（INR）', max_value=50, min_value=0,value=0.5)
+    J = st.number_input('International Normalized Ratio（INR）', max_value=50.0, min_value=0.0,value=0.5)
     if J<0.5 or J>10:
         st.error(warning)
         is_pass =False
