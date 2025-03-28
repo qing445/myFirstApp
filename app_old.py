@@ -18,7 +18,6 @@ st.title('Predicting the risk of heart failure after non-cardiac surgery in geri
 
 warning = 'You have entered an extreme value. Please confirm whether the value for this feature is correct.'
 is_pass = True
-
 left, right = st.columns(2)
 with left:
     E = st.selectbox('Coronary heart disease (Yes or No)', ['No', 'Yes'])
