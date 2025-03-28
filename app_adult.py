@@ -22,44 +22,44 @@ warning = 'You have entered an extreme value. Please confirm whether the value f
 is_pass = True
 left, right = st.columns(2)
 with left:
-    B = st.number_input('Albumin（g/L）', max_value=200, min_value=0,default=20)
+    B = st.number_input('Albumin（g/L）', max_value=200, min_value=0,value=20)
     if B<10 or B>100:
         st.error(warning)
         is_pass = False
     A = st.number_input('Age（years）', max_value=100, min_value=18)
     E = st.number_input('eGFR（mL/min/1.73m²）', max_value=500, min_value=0)
-    C = st.number_input('Neutrophil-to-lymphocyte ratio (NLR)', max_value=50, min_value=0,default=0.5)
+    C = st.number_input('Neutrophil-to-lymphocyte ratio (NLR)', max_value=50, min_value=0,value=0.5)
     if C<0.1 or C>25:
         st.error(warning)
         is_pass =False
-    D = st.number_input('Serum creatinine（μmol/L）', max_value=5000, min_value=0,default=10)
+    D = st.number_input('Serum creatinine（μmol/L）', max_value=5000, min_value=0,value=10)
     if D<10 or D>1500:
         st.error(warning)
         is_pass =False
-    J = st.number_input('International Normalized Ratio（INR）', max_value=50, min_value=0,default=0.5)
+    J = st.number_input('International Normalized Ratio（INR）', max_value=50, min_value=0,value=0.5)
     if J<0.5 or J>10:
         st.error(warning)
         is_pass =False
 
 with right:
     G = st.number_input('Absolute lymphocyte count（× 10⁹/L）', max_value=20.0, min_value=0.1)
-    H = st.number_input('Pulse rate（beats/min）', max_value=250, min_value=0,default=20)
+    H = st.number_input('Pulse rate（beats/min）', max_value=250, min_value=0,value=20)
     if H <20 or H>200:
         st.error(warning)
         is_pass =False
-    F = st.number_input('Blood glucose（mmol/L）', max_value=50.0, min_value=0.0,default=1.0)
+    F = st.number_input('Blood glucose（mmol/L）', max_value=50.0, min_value=0.0,value=1.0)
     if F<1 or F>35:
         st.error(warning)
         is_pass =False
-    L = st.number_input('MCHC（g/L）', max_value=1000, min_value=0,default=20)
+    L = st.number_input('MCHC（g/L）', max_value=1000, min_value=0,value=20)
     if L<20 or L>500:
         st.error(warning)
         is_pass =False
-    I = st.number_input('Absolute neutrophil count（× 10⁹/L）', max_value=500.0, min_value=0.1,default=0.5)
+    I = st.number_input('Absolute neutrophil count（× 10⁹/L）', max_value=500.0, min_value=0.1,value=0.5)
     if I<0.2 or I>150:
         st.error(warning)
         is_pass =False
-    K = st.number_input('Diastolic blood pressure（mmHg）', max_value=200, min_value=1,default=20)
+    K = st.number_input('Diastolic blood pressure（mmHg）', max_value=200, min_value=1,value=20)
     if K<20 or K>150:
         st.error(warning)
         is_pass =False
