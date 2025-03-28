@@ -18,9 +18,12 @@ import os
 # st.markdown("<h1 style='text-align: center; color: green;'>Predicting the risk of heart failure after non-cardiac surgery in patients</h1", unsafe_allow_html=True)
 st.title('Predicting the risk of heart failure after non-cardiac surgery in adult patients')
 
+warning = 'You have entered an extreme value. Please confirm whether the value for this feature is correct.'
 left, right = st.columns(2)
 with left:
     B = st.number_input('Albumin（g/L）', max_value=200, min_value=0)
+    if B<10 or B>100:
+        st.error(warning)
     A = st.number_input('Age（years）', max_value=100, min_value=18)
     E = st.number_input('eGFR（mL/min/1.73m²）', max_value=500, min_value=0)
     C = st.number_input('Neutrophil-to-lymphocyte ratio (NLR)', max_value=50, min_value=0)
