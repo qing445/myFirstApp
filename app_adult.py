@@ -75,7 +75,7 @@ if st.button('Predict'):
     st.pyplot(plt.gcf())
 
 st.write(
-        "**Tips:**  \n1.The factorial variables1 represent the disease.  \n2.The remaining numerical variable were the patient's most recent laboratory test before non-cardic surgery.")
+        "**Tips:**  \nThe remaining numerical variable were the patient's most recent laboratory test before non-cardic surgery.")
 
 
 
