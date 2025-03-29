@@ -25,43 +25,49 @@ with left:
         E = 1
     else:
         E = 0
-    A = st.number_input('Age（years）', max_value=100, min_value=65)
-    F = st.number_input('Albumin（g/L）', max_value=200, min_value=0,value =20)
+    A = st.number_input('Age（years）',value=65)
+    if A<65 or F>100:
+        st.error(warning)
+        is_pass = False
+    F = st.number_input('Albumin（g/L）', value =20)
     if F<10 or F>100:
         st.error(warning)
         is_pass = False
-    D = st.number_input('Neutrophil-to-lymphocyte ratio (NLR)', max_value=50.0, min_value=0.0,value = 0.5)
+    D = st.number_input('Neutrophil-to-lymphocyte ratio (NLR)', value = 0.5)
     if D<0.1 or D>25:
         st.error(warning)
         is_pass = False
-    H = st.number_input('International Normalized Ratio（INR）', max_value=50.0, min_value=0.0,value = 0.5)
+    H = st.number_input('International Normalized Ratio（INR）', value = 0.5)
     if H<0.5 or H>10:
         st.error(warning)
         is_pass = False
-    B = st.number_input('Pulse rate（beats/min）', max_value=250, min_value=0,value = 20)
+    B = st.number_input('Pulse rate（beats/min）', value = 20)
     if B<20 or B>200:
         st.error(warning)
         is_pass = False
         
 with right:
-    G = st.number_input('eGFR（mL/min/1.73m²）', max_value=500, min_value=0)
-    C = st.number_input('Absolute neutrophil count（× 10⁹/L）', max_value=50.0, min_value=0.1,value=0.5)
+    G = st.number_input('eGFR（mL/min/1.73m²）', value = 5)
+    if G<=0:
+        st.error(warning)
+        is_pass = False
+    C = st.number_input('Absolute neutrophil count（× 10⁹/L）', value=0.5)
     if C<0.2 or C>150:
         st.error(warning)
         is_pass = False
-    J = st.number_input('Diastolic blood pressure（mmHg）', max_value=200, min_value=1,value =20)
+    J = st.number_input('Diastolic blood pressure（mmHg）', value =20)
     if J<20 or J>150:
         st.error(warning)
         is_pass = False
-    I = st.number_input('Serum creatinine（μmol/L）', max_value=5000, min_value=0,value=10)
+    I = st.number_input('Serum creatinine（μmol/L）', value=10)
     if I<10 or I>1500:
         st.error(warning)
         is_pass = False
-    K = st.number_input('BMI kg/m²', max_value=100, min_value=1,value=5)
+    K = st.number_input('BMI kg/m²', value=5)
     if K<5 or K>50:
         st.error(warning)
         is_pass = False
-    L = st.number_input('Systolic blood pressure（mmHg）', max_value=500, min_value=1,value=40)
+    L = st.number_input('Systolic blood pressure（mmHg）', value=40)
     if L<40 or L>250:
         st.error(warning)
         is_pass = False
