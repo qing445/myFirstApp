@@ -26,7 +26,7 @@ with left:
     else:
         E = 0
     A = st.number_input('Age（years）',value=65)
-    if A<65 or F>100:
+    if A<65 or A>100:
         st.error(warning)
         is_pass = False
     F = st.number_input('Albumin（g/L）', value =20)
