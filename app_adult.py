@@ -68,7 +68,7 @@ with right:
     if I<0.2 or I>150:
         st.error(warning)
         is_pass =False
-    K = st.number_input('Diastolic blood pressure（mmHg）', alue=20)
+    K = st.number_input('Diastolic blood pressure（mmHg）', value=20)
     if K<20 or K>150:
         st.error(warning)
         is_pass =False
