@@ -61,7 +61,7 @@ with right:
         M = 1
     else:
         M = 0
-    J = st.number_input('Serum creatinine（umol/L）', value=50)
+    J = st.number_input('Serum creatinine（μmol/L）', value=50)
     if J < 10 or J > 1500:
         st.error(warning)
         is_pass = False
@@ -77,7 +77,7 @@ with right:
     if I < 40 or I > 250:
         st.error(warning)
         is_pass = False
-    N = st.number_input('MCHC（g/l）', value=50)
+    N = st.number_input('MCHC（g/L）', value=50)
     if N < 20 or N > 500:
         st.error(warning)
         is_pass = False
