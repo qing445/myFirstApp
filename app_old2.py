@@ -15,7 +15,7 @@ import os
 
 # 标题,居中
 # st.markdown("<h1 style='text-align: center; color: green;'>Predicting the risk of heart failure after non-cardiac surgery in patients</h1", unsafe_allow_html=True)
-st.title('Predicting the  risk of heart failure after non-cardiac surgery in geriatric patients')
+st.title('Predicting the risk of heart failure after non-cardiac surgery in geriatric patients')
 
 warning = 'You have entered an extreme value. Please confirm whether the value for this feature is correct.'
 is_pass = True
@@ -94,7 +94,7 @@ sample = np.array([x for x in input_features]).reshape(1, -1)
 
 if is_pass:
     if st.button('Predict'):
-        model = joblib.load(r'/demo20250509/model_old2.pkl')
+        model = joblib.load('model_old2.pkl')
 
         explainer = shap.TreeExplainer(model)
         shap_values = explainer.shap_values(sample)
