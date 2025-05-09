@@ -123,4 +123,4 @@ if is_pass:
         st.pyplot(plt.gcf())
 
 st.write(
-    "**Tips:**  \n1.The model uses the Random Forest(RF) to predict the risk of heart failure in non-cardiac surgical patients.  \n2.Severe anemia is defined as hemoglobin < 60 g/L  \n2.The remaining numerical variable were the patient's most recent laboratory test before non-cardic surgery.")
+    "**Tips:**  \n1.The model uses the Random Forest(RF) to predict the risk of heart failure in non-cardiac surgical patients.  \n2.Severe anemia is defined as hemoglobin < 60 g/L  \n3.The remaining numerical variable were the patient's most recent laboratory test before non-cardic surgery.")
