@@ -42,7 +42,8 @@ with left:
     if D<10 or D>1500:
         st.error(warning)
         is_pass =False
-    J = st.number_input('International Normalized Ratio（INR）', value=0.5)
+    J = st.text_input('International Normalized Ratio（INR）', value=0.5)
+    J = float(J)
     if J<0.5 or J>10:
         st.error(warning)
         is_pass =False
