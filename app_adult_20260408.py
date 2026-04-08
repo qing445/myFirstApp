@@ -67,7 +67,7 @@ input_features = [A, B, C, E,J,K,D,H]
 sample = np.array([x for x in input_features]).reshape(1, -1)
 if is_ok:
     if st.button('Predict'):
-        model = joblib.load('pt_st/medicalPredict20250320/model_audlt_20260408.pkl')
+        model = joblib.load('model_audlt_20260408.pkl')
 
         explainer = shap.Explainer(model)
         shap_values = explainer(sample)
